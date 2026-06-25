@@ -12,7 +12,8 @@ def game():
         guess_num = int(input("Enter your guess number: "))
         if guess_num==num:
             print(f"You got it.{num} is the correct number. Congratulations!\n")
-            break
+            end()
+            # break
         elif guess_num>num:
             print("Too high.")
         elif guess_num<num:
@@ -27,16 +28,16 @@ print("----Welcome to The Ultimate Number Guesser Game----")
 
 game()
 
-# def end():
-#     end = input("Press Enter for replay and q for exiting the game.")
-# while True:
-#     if end=="":
-#         game()
-#     elif end=="q":
-#         break
-#     else:
-#         print("Invalid.")
-#         end()
+def end():
+    end = input("Press Enter for replay and q for exiting the game.")
+while True:
+    if end=="":
+        game()
+    elif end=="q":
+        break
+    else:
+        print("Invalid.")
+        end()
      
      
 
