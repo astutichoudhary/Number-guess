@@ -12,9 +12,7 @@ def game():
     num = random.randint(low,high+1)
     
     size = high - low +1
-    print("Your range of numbers is ",size)
-
-    i = 1
+    print(f"Your range of numbers is {size}\nLet the guessing begin!")
 
     for i in range(1,8):
 
@@ -34,7 +32,7 @@ def game():
                     print("High.")
                 elif diff >= size/20: # for 100 range,10%
                     print("Close. Still high.")
-                elif diff <= size/20: # for 100 range, error less than 5%
+                elif diff < size/20: # for 100 range, error less than 5%
                     print("Right there. Still low.")
             
             elif guess_num<num:
